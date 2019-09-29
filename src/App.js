@@ -1,6 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { Router } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 
 import 'config/ReactotronConfig';
@@ -12,12 +12,12 @@ import Routes from './routes';
 
 const App = () => (
   <Provider store={store}>
-    <Router history={history}>
+    <HashRouter history={history}>
       <Header />
       <Routes />
       <GlobalStyles />
       <ToastContainer autoClose={3000} />
-    </Router>
+    </HashRouter>
   </Provider>
 );
 
